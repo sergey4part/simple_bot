@@ -11,6 +11,7 @@ def start_bot(update: Updater, context: CallbackContext):
 	print(update)
 	mytext = """Hello {}
 	Ihave only /start command! =)""".format(update.message.chat.first_name)
+	logging.info('User {} press /start'.format(update.message.chat.first_name))
 	update.message.reply_text(mytext)
 
 def chat(update: Updater, context: CallbackContext):
